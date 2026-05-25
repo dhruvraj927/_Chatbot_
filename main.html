@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHATBOT</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,8 +15,17 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
     <script type="text/babel">
+        function App(){
+            return(
+                <div>
+                    
+                </div>
+            );
+        }
 
-        
+
+        const conatiner=document.querySelector(".js-container");
+        ReactDOM.createRoot(conatiner).render(<App/>)
 
     </script>
 </body>
