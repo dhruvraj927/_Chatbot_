@@ -15,10 +15,25 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
     <script type="text/babel">
+
+        function Chat_Input(){
+            return(
+                <div>
+                    <input 
+                        type="text"
+                        placeholder="Enter the message here" 
+                        class='ChatInput' size='30' >
+                     
+                    </input>   
+                    <button class="Button_Click" > Send </button>
+
+                </div>
+            );
+        }
         function App(){
             return(
                 <div>
-                    
+                    <Chat_Input/>
                 </div>
             );
         }
