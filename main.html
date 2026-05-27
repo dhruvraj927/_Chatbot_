@@ -16,24 +16,62 @@
     
     <script type="text/babel">
 
-        function Chat_Input(){
+        function Chat_Input({Messages,SetMessages}){
+            const [initial,setinput]=React.useState('');
+
+            function write(event){
+               setinput(event.target.value)
+            }
+            
+
+            function add(){
+                SetMessages([...Messages,{
+                    text:initial,
+                    sender:'user',
+                    id:crypto.randomUUID()
+                }])
+                setinput('');
+            }
             return(
-                <div>
+                <div className='Chat_input_container'>
                     <input 
                         type="text"
                         placeholder="Enter the message here" 
-                        class='ChatInput' size='30' >
+                        class='ChatInput'
+                        value={initial}
+                        onChange={write} >
                      
-                    </input>   
-                    <button class="Button_Click" > Send </button>
+                    </input> 
+
+                    <button 
+                        class="Button_Click" 
+                        onClick={add}
+                    > Send </button>
+
+                    
 
                 </div>
             );
         }
-        function App(){
+
+        
+        function MessageSee({Messages}){
             return(
-                <div>
-                    <Chat_Input/>
+                <div className='Message_container'>
+                </div>
+            )
+        }
+        function App(){
+            const [Messages,SetMessages]=React.useState({});
+            return(
+                <div className='App_container' >
+                    <Chat_Input
+                    Messages={Messages}
+                    SetMessages={SetMessages}
+                    />
+                    <MessageSee
+                    Messages={Messages}
+                    />
                 </div>
             );
         }

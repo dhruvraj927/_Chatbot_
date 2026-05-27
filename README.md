@@ -1,5 +1,18 @@
 # _Chatbot_
-This is a chatbot which is created by me for learning how the REACT works and HTML  update and how JAVASCRIPT use in HTML
+<ul>
+    <li>This is created by me for learning purpose.</li>
+    <li>This is beginner level project to get the basic understanding of how <bold>JAVASCRIPT</bold> is work inside the <bold>HTML</bold> </li>
+    <li>For making this , I watch the tutorial of <bold>React</bold> on Supersimpledev </li>
+    <li>So i got the clear understanding of-> <ul>
+                                                <li>useState</li>
+                                                <li>Props</li>
+                                                <li>Events</li>
+                                                </ul>
+    </li>
+    <li>This is simple Chatbot where i use external library for Chatbot .</li>
+
+    
+</ul>
 
 <h1>Topic use in this</h1>
 <ul>
@@ -8,6 +21,9 @@ This is a chatbot which is created by me for learning how the REACT works and HT
     <li>CSS</li>
     <li>REACT (inbuilt)</li>
 </ul>
+<br>
+<hr>
+
 
 
 
