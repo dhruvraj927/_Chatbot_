@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    
+    <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
     <script type="text/babel">
 
         function Chat_Input({Messages,SetMessages}){
@@ -28,6 +28,13 @@
                 SetMessages([...Messages,{
                     text:initial,
                     sender:'user',
+                    id:crypto.randomUUID()
+                }])
+
+                const response=Chatbot.getResponse(initial);
+                SetMessages([...Messages,{
+                    text:response,
+                    sender:'bot',
                     id:crypto.randomUUID()
                 }])
                 setinput('');
@@ -58,6 +65,9 @@
         function MessageSee({Messages}){
             return(
                 <div className='Message_container'>
+                    {
+                       
+                    }
                 </div>
             )
         }
