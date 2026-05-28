@@ -23,6 +23,8 @@
 </ul>
 <br>
 <hr>
+<p>After complet this react begnineer projet i got how react work and how <bold>useState</bold>work and how update the <bold>UI</bold> and how react DOmM work </p>
+
 
 
 
