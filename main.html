@@ -25,18 +25,39 @@
             
 
             function add(){
-                SetMessages([...Messages,{
-                    text:initial,
-                    sender:'user',
-                    id:crypto.randomUUID()
-                }])
+                // SetMessages([...Messages,{
+                //     text:initial,
+                //     sender:'user',
+                //     id:crypto.randomUUID()
+                // }])
 
-                const response=Chatbot.getResponse(initial);
-                SetMessages([...Messages,{
-                    text:response,
-                    sender:'bot',
-                    id:crypto.randomUUID()
-                }])
+                // const response=chatbot.getResponse(initial);
+                // SetMessages([...Messages,{
+                //     text:response,
+                //     sender:'bot',
+                //     id:crypto.randomUUID()
+                // }])
+                // setinput('');
+                 const userMessage = {
+                    text: initial,
+                    sender: 'user',
+                    id: crypto.randomUUID()
+                };
+
+                const response = chatbot.getResponse(initial);
+
+                const botMessage = {
+                    text: response,
+                    sender: 'bot',
+                    id: crypto.randomUUID()
+                };
+
+                SetMessages([
+                    ...Messages,
+                    userMessage,
+                    botMessage
+                ]);
+
                 setinput('');
             }
             return(
@@ -87,7 +108,7 @@
             )
         }
         function App(){
-            const [Messages,SetMessages]=React.useState({});
+            const [Messages,SetMessages]=React.useState([]);
             return(
                 <div className='App_container' >
                     <Chat_Input
