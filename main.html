@@ -86,10 +86,16 @@
         function MessageSee({Messages}){
             function ChatMess({ message, sender }) {
                 return (
-                    <div>
+                    <div className={sender === 'bot' ? 'Bot_Message' : 'User_Message'}>
+                        <div className='bot_img'>
                         {sender === 'bot' && <img src='bot.jpg' width='30' />}
+                        </div>
+                        <div className='Message_Text'>
                         {message}
+                        </div>
+                        <div className='user_img'>
                         {sender === 'user' && <img src='me.jpg' width='30' />}
+                        </div>
                     </div>
                 );
             }
